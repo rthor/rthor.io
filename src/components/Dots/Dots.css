@@ -1,0 +1,35 @@
+.Dots {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+}
+
+@keyframes in {
+  from {
+    opacity: 0;
+    transform: scale(0.6)
+  }
+}
+
+.Dots-item {
+  animation: in 10s 1 backwards;
+  border-radius: 50%;
+  filter: blur(50px);
+  height: 80vmin;
+  margin-top: -40vmin;
+  margin-left: -40vmin;
+  position: absolute;
+  width: 80vmin;
+}
+
+.Dots-item:first-child {
+  background-color: #FFF8F2;
+  transform: translate3d(-40%, 40%, 0);
+}
+
+.Dots-item:last-child {
+  animation-delay: 1s;
+  background-color: #F2FDFF;
+  transform: translate3d(40%, -40%, 0);
+}
