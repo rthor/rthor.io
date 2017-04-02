@@ -1,4 +1,11 @@
+.App {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
 .App-main {
-  font-size: 2.5rem;
-  line-height: 1.5;
+  font-size: 2rem;
+  line-height: 1.6;
 }

@@ -5,8 +5,7 @@
 }
 
 html,
-body,
-.root {
+body {
   height: 100%;
 }
 
@@ -16,22 +15,33 @@ html {
   font-size: 8px;
   font-weight: 300;
   line-height: 1;
-  
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: "liga" on;
-  color: rgba(0,0,0,.8);
+  color: #444;
 }
 
-body {
-  overflow: hidden
+@media (min-width: 320px) {
+  html {
+    font-size: calc(8px + (11 - 8) * (100vw - 320px) / (1000 - 320));
+  }
+}
+
+@media (min-width: 1000px) {
+  html {
+    font-size: 12px;
+  }
 }
 
 .root {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  height: 100%;
+  left: 0;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 h3 {
@@ -41,15 +51,19 @@ h3 {
 a,
 a:visited {
   color: inherit;
-    text-decoration: none;
   background-image: linear-gradient(to bottom,rgba(0,0,0,.6) 50%,rgba(0,0,0,0) 50%);
   background-repeat: repeat-x;
   background-size: 2px .1em;
   background-position: 0 1.07em;
+  text-decoration: none;
 }
 
 p + * {
   padding-top: 1em;
+}
+
+h1, h2, h3, h4, h5 {
+  padding-bottom: .4em;
 }
 
 strong, b {
