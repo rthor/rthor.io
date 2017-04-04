@@ -1,9 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
+import 'babel-polyfill'
+import React from 'react'
+import app from './app'
+import { renderClient } from 'react-chain'
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+renderClient(app, document.getElementById('root'))

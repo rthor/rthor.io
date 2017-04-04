@@ -9,8 +9,13 @@
     "react-test-renderer": "^15.4.1"
   },
   "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "query-string": "^4.3.2",
     "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "react-chain": "next",
+    "react-chain-history": "next",
+    "react-dom": "^15.4.1",
+    "universal-router": "^3.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

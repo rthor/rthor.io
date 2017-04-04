@@ -1,11 +1,11 @@
-.App {
+.Layout {
   align-items: center;
   display: flex;
   justify-content: center;
   min-height: 100vh;
 }
 
-.App-main {
+.Layout-main {
   font-size: 2rem;
   line-height: 1.6;
 }
