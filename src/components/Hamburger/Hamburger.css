@@ -1,0 +1,44 @@
+.Hamburger {
+  appearance: none;
+  background: none;
+  color: #bebebe;
+  border: none;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  right: 2em;
+  transition: color 400ms;
+  top: 2em;
+  cursor: pointer;
+  outline: none;
+  z-index: 10;
+}
+
+.Hamburger-top,
+.Hamburger-mid,
+.Hamburger-bot {
+  background: currentColor;
+  display: block;
+  height: 4px;
+  transform-origin: 50% 50%;
+  transition: transform 400ms;
+  width: 36px;
+}
+
+.Hamburger.isOpen {
+  color: #FC9364;
+}
+
+.Hamburger.isOpen .Hamburger-top {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.Hamburger.isOpen .Hamburger-mid {
+  transform: scaleX(0);
+}
+
+.Hamburger.isOpen .Hamburger-bot {
+  transform: translateY(-10px) rotate(-45deg);
+}

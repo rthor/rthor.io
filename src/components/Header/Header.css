@@ -1,0 +1,19 @@
+.Header {
+  left: 0;
+  position: fixed;
+  right: 0;
+  padding-top: 1.5em;
+  text-align: center;
+  top: 0;
+}
+
+.Header-logo {
+  color: #bebebe;
+  font-size: 3rem;
+  line-height: 1;
+  margin: 0;
+}
+
+.Header-logo a {
+  background: none;
+}

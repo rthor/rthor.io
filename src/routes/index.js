@@ -1,14 +1,22 @@
 import React from 'react'
 import Home from './Home'
+import About from './About'
 import Layout from '../components/Layout'
 
 export default [
 	{
 		path: '/',
-		action() {
+
+		children: [
+			Home,
+			About,
+		],
+
+		async action({ next, url }) {
+			const el = await next()
 			return (
-				<Layout>
-					<Home />
+				<Layout path={url}>
+					{el}
 				</Layout>
 			)
 		}

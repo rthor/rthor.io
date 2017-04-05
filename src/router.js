@@ -8,13 +8,11 @@ export default routes => session => {
 
 	return async () => {
 		try {
-			const route = await router.resolve({
+			return await router.resolve( {
 				context: session,
 				path: session.history.location.pathname,
-				query: queryString.parse(session.history.location.search),
-			})
-			console.log( route )
-			return route
+				query: queryString.parse( session.history.location.search ),
+			} )
 		} catch (error) {
 			return <NotFound error={error} />
 		}
