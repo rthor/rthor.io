@@ -1,6 +1,6 @@
-import React from 'react'
-import Container from '../components/Container'
-import Link from '../components/Link'
+import React from 'react';
+import Container from '../components/Container';
+import Link from '../components/Link';
 
 export default {
   path: '/',
@@ -10,6 +10,6 @@ export default {
       <Container>
         <Link href="/about">About</Link>
       </Container>
-		)
+    );
   }
-}
+};

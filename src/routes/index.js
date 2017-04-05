@@ -1,24 +1,21 @@
-import React from 'react'
-import Home from './Home'
-import About from './About'
-import Layout from '../components/Layout'
+import React from 'react';
+import Home from './Home';
+import About from './About';
+import Layout from '../components/Layout';
 
 export default [
-	{
-		path: '/',
+  {
+    path: '/',
 
-		children: [
-			Home,
-			About,
-		],
+    children: [Home, About],
 
-		async action({ next, url }) {
-			const el = await next()
-			return (
-				<Layout path={url}>
-					{el}
-				</Layout>
-			)
-		}
-	}
-]
+    async action({ next, url }) {
+      const el = await next();
+      return (
+        <Layout path={url}>
+          {el}
+        </Layout>
+      );
+    }
+  }
+];

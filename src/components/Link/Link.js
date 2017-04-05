@@ -1,19 +1,23 @@
-import React from 'react'
+import React from 'react';
 
 const Link = ({ href, afterClick, ...rest }, { history }) => (
-	<a href={href} {...rest} onClick={event => {
-		if (history == null) {
-			return
-		}
+  <a
+    href={href}
+    {...rest}
+    onClick={event => {
+      if (history == null) {
+        return;
+      }
 
-		history.push(href)
-		afterClick(href)
-		event.preventDefault()
-	}} />
-)
+      history.push(href);
+      afterClick(href);
+      event.preventDefault();
+    }}
+  />
+);
 
 Link.contextTypes = {
-	history: React.PropTypes.object,
-}
+  history: React.PropTypes.object
+};
 
-export default Link
+export default Link;
