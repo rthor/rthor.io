@@ -1,5 +1,5 @@
 import 'babel-polyfill';
 import app from './app';
-import { renderClient } from 'react-chain';
+import { startClient } from 'react-chain';
 
-renderClient(app, document.getElementById('root'));
+startClient(app, document.getElementById('root'));
